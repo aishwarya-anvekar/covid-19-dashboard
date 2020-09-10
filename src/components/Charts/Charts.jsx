@@ -18,7 +18,7 @@ const Charts = ({
     <>
       <div className="header1">
         <div>
-          <img src="logo.png"/> 
+          <img src="logo.png" alt="logo"/> 
         </div>
         <div>
           <div className="main-title">INDIA COVID-19 Tracker</div>

@@ -3,7 +3,6 @@ import "./App.css";
 import StateTable from "./components/StateTable/StateTable.jsx";
 import ChloropethIndia from "./components/ChloropethIndia/ChloropethIndia";
 import Charts from "./components/Charts/Charts";
-import { GridListTile, Card } from "@material-ui/core";
 export default class App extends Component {
   state = {
     statewise: [],
