@@ -1,0 +1,40 @@
+.chart {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 1rem;
+}
+.line-chart {
+  width: 50%;
+}
+.donut-chart {
+  width: 50%;
+}
+
+.header1 {
+  display: flex;
+  justify-content: flex-start;
+  
+}
+
+.main-title {
+  margin: 1rem;
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  font-display: center;
+}
+
+.sub-title {
+  margin: 1rem;
+  color: gray;
+  font-size: 15px;
+  font-display: center;
+}
+
+.img {
+  width: 80%;
+  height: auto;
+
+}
+

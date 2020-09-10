@@ -1,0 +1,56 @@
+.status-number-cards {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem;
+  grid-gap: 25px;
+}
+.chloropeth-india {
+  height: 105vh;
+  margin: 0 2rem;
+}
+
+.state-name-last-date {
+  display: flex;
+  justify-content: space-between;
+}
+.state-name {
+  margin-left: 2rem;
+  color: rgb(230, 52, 67);
+  font-weight: bold;
+  font-size: 18px;
+}
+.last-date-title {
+  margin-right: 6rem;
+  display: flex;
+  flex-direction: row-reverse;
+  color: rgb(0, 144, 62, 0.55);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.last-date {
+  color: rgb(0, 144, 62);
+  font-weight: bold;
+  margin-right: 6rem;
+  margin-top: 0.5rem;
+}
+
+.header2 {
+  width: 50vw;
+  margin: 1rem;
+}
+
+.main-title {
+  margin: 2rem;
+  color: black;
+  font-weight: bold;
+  font-size: 2px;
+  font-display: center;
+}
+
+.sub-title {
+  margin: 2rem;
+  color: gray;
+  font-size: 10px;
+  font-display: center;
+}

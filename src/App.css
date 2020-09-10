@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.state-table {
+  width: 50vw;
+}
+
+.map {
+  margin-top: 1.2rem;
+  width: 50vw;
+  height: 98%;
+}
+.card-border-radius {
+  border-radius: 10px !important;
+}
+
