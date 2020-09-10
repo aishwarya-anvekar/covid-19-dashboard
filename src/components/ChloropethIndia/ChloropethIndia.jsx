@@ -119,11 +119,16 @@ export default class ChloropethIndia extends Component {
   }
 
   render() {
+    window.ZC.LICENSE = [
+      "569d52cefae586f634c54f86dc99e6a9",
+      "b55b025e438fa8a98e32482b5f768ff5",
+    ];
+
     return (
       <>
         <div className="header2">
-            <div className="main-title">INDIA MAP</div>
-            <div className="sub-title">HOVER OVER A STATE FOR MORE DETAILS</div>
+          <div className="main-title">INDIA MAP</div>
+          <div className="sub-title">HOVER OVER A STATE FOR MORE DETAILS</div>
         </div>
         <Card className="chloropeth-india card-border-radius">
           <div className="status-number-cards">

@@ -4,7 +4,7 @@ import DonutChart from "../DonutChart/DonutChart";
 import { Card } from "@material-ui/core";
 import "./Charts.css";
 
-
+import logo from "../../logo.png";
 const Charts = ({
   statewise,
   last7DaysData,
@@ -18,11 +18,14 @@ const Charts = ({
     <>
       <div className="header1">
         <div>
-          <img src="logo.png" alt="logo"/> 
+          <img src={logo} className="map-image" alt="logo" />
         </div>
         <div>
           <div className="main-title">INDIA COVID-19 Tracker</div>
-          <div className="sub-title">Let's all pray to make our Earth Covid-19 free soon, Stay Safe and do TheLocate</div>
+          <div className="sub-title">
+            Let's all pray to make our Earth Covid-19 free soon, Stay Safe and
+            do TheLocate
+          </div>
         </div>
       </div>
       <Card className="chart card-border-radius">

@@ -18,7 +18,7 @@ const DonutChart = ({
       },
       "border-width": 0,
       "toggle-action": "remove",
-      x: "70%",
+      x: "67%",
       y: "38%",
     },
     plot: {
@@ -58,6 +58,10 @@ const DonutChart = ({
       },
     ],
   };
+  window.ZC.LICENSE = [
+    "569d52cefae586f634c54f86dc99e6a9",
+    "b55b025e438fa8a98e32482b5f768ff5",
+  ];
   return <ZingChart height="200" data={config} />;
 };
 
