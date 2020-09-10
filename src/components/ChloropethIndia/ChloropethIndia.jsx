@@ -7,6 +7,7 @@ import "zingchart/modules-es6/zingchart-maps-ind.min.js";
 import { Card } from "@material-ui/core";
 import StatusNumberCard from "../StatusNumberCard/StatusNumberCard.jsx";
 import util from "../../../src/utils/util.js";
+
 export default class ChloropethIndia extends Component {
   state = { loading: false };
   getConfig = () => {
@@ -119,11 +120,6 @@ export default class ChloropethIndia extends Component {
   }
 
   render() {
-    window.ZC.LICENSE = [
-      "569d52cefae586f634c54f86dc99e6a9",
-      "b55b025e438fa8a98e32482b5f768ff5",
-    ];
-
     return (
       <>
         <div className="header2">
