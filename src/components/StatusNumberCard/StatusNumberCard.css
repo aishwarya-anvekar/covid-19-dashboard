@@ -1,9 +1,9 @@
 .root {
   min-width: 30px;
-  width: 165px;
+  width: 12vw;
   display: flex;
   justify-content: flex-start;
-  height: 80px;
+  height: 5vw;
 }
 
 .red {
@@ -34,5 +34,17 @@
 
 .title,
 .sub-title {
+  font-size: calc(1vw) !important;
   font-weight: bold !important;
+}
+
+@media (min-width: 420px) and (max-width: 682px) {
+  .root {
+    width: auto !important;
+    height: 8vw !important;
+  }
+  .title,
+  .sub-title {
+    font-size: calc(1.5vw) !important;
+  }
 }

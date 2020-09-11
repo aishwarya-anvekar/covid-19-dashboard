@@ -4,9 +4,15 @@
 }
 .container {
   max-height: 71.5vh !important;
-  width: 50vw !important;
+  /* width: 50vw !important; */
   margin: 1rem;
 }
 .state-hover {
   background-color: #f5d7d7 !important;
+}
+
+@media screen and (max-width: 1238px) {
+  .container {
+    width: 96vw !important;
+  }
 }

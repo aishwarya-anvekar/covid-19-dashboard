@@ -43,3 +43,25 @@
   width: 48px;
   height: 48px;
 }
+@media screen and (max-width: 1238px) {
+  .chart {
+    margin-left: 1rem !important;
+    margin-top: 0.5rem !important;
+  }
+}
+
+@media screen and (max-width: 682px) {
+  .chart {
+    flex-direction: column;
+  }
+
+  .line-chart {
+    width: 100%;
+    margin-left: 1rem;
+  }
+  .donut-chart {
+    width: 100%;
+    margin: 0;
+    margin-left: -2rem;
+  }
+}

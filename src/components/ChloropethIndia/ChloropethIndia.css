@@ -44,17 +44,23 @@
   height: 100px;
 }
 
-.main-title {
-  margin: 2rem;
-  color: black;
-  font-weight: bold;
-  font-size: 2px;
-  font-display: center;
-}
-
 .sub-title {
   margin: 2rem;
   color: gray;
   font-size: 10px;
   font-display: center;
+}
+
+@media screen and (max-width: 1238px) {
+  .header2 {
+    margin-top: 2rem;
+
+    margin-bottom: -1rem;
+  }
+  .state-name {
+    margin-left: 5rem;
+  }
+  .MuiCard-root {
+    margin: 0 !important;
+  }
 }

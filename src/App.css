@@ -12,7 +12,20 @@
   width: 50vw;
   height: 98%;
 }
+
 .card-border-radius {
   border-radius: 10px !important;
 }
 
+@media screen and (max-width: 1238px) {
+  .main {
+    flex-direction: column;
+  }
+  .state-table {
+    width: 96vw;
+  }
+  .map {
+    width: 96vw;
+    margin-left: 1rem;
+  }
+}
