@@ -7,7 +7,6 @@ import "zingchart/modules-es6/zingchart-maps-ind.min.js";
 import { Card } from "@material-ui/core";
 import StatusNumberCard from "../StatusNumberCard/StatusNumberCard.jsx";
 import util from "../../../src/utils/util.js";
-
 export default class ChloropethIndia extends Component {
   state = { loading: false };
   getConfig = () => {
@@ -24,7 +23,7 @@ export default class ChloropethIndia extends Component {
               tooltip: {
                 text: this.props.state
                   ? `${this.props.state}: ${this.props.confirmedCount}`
-                  : "Loading...",
+                  : "",
                 backgroundColor: "#5d666f",
                 fontColor: "#FFF",
                 fontSize: "18px",
@@ -51,63 +50,55 @@ export default class ChloropethIndia extends Component {
     return config;
   };
 
-  //performance improvement
-  componentDidUpdate(prevProps) {
-    if (prevProps.state !== this.props.state) {
-      this.setState({ loading: false });
-    }
-  }
-
-  componentDidMount() {
+  getShapeOverClickHandler = (event) => {
     const statewise = this.props.statewise;
-    const instance = this;
-    zingchart.shape_mouseover = function (event) {
-      instance.setState({ loading: true });
-      setTimeout(function () {
-        let statecode = event.shapeid;
-        statecode = statecode === "TL" ? "TG" : statecode;
-        const stateInfo = util.getHoveredStateData(statewise, statecode);
-        if (stateInfo) {
-          const {
-            active,
-            confirmed,
-            recovered,
-            deaths,
-            lastupdatedtime,
-            state,
-          } = stateInfo;
-          const activeCount = active;
-          const confirmedCount = confirmed;
-          const recoveredCount = recovered;
-          const deceasedCount = deaths;
-          const selectedState = statecode;
-
-          instance.props.setStatewiseCounts(
-            confirmedCount,
-            activeCount,
-            recoveredCount,
-            deceasedCount,
-            selectedState,
-            lastupdatedtime,
-            state
-          );
-        }
-      }, 300);
-    };
-    zingchart.shape_mouseout = function (event) {
+    let statecode = event.shapeid;
+    statecode = statecode === "TL" ? "TG" : statecode;
+    const stateInfo = util.getHoveredStateData(statewise, statecode);
+    if (stateInfo) {
       const {
         active,
         confirmed,
         recovered,
         deaths,
         lastupdatedtime,
-      } = instance.props.total;
+        state,
+      } = stateInfo;
+      const activeCount = active;
+      const confirmedCount = confirmed;
+      const recoveredCount = recovered;
+      const deceasedCount = deaths;
+      const selectedState = statecode;
+
+      this.props.setStatewiseCounts(
+        confirmedCount,
+        activeCount,
+        recoveredCount,
+        deceasedCount,
+        selectedState,
+        lastupdatedtime,
+        state
+      );
+    }
+  };
+  componentDidMount() {
+    zingchart.shape_mouseover = this.getShapeOverClickHandler;
+    zingchart.shape_click = this.getShapeOverClickHandler;
+
+    zingchart.shape_mouseout = (event) => {
+      const {
+        active,
+        confirmed,
+        recovered,
+        deaths,
+        lastupdatedtime,
+      } = this.props.total;
       const activeCount = active;
       const confirmedCount = confirmed;
       const recoveredCount = recovered;
       const deceasedCount = deaths;
       const selectedState = null;
-      instance.props.setStatewiseCounts(
+      this.props.setStatewiseCounts(
         activeCount,
         confirmedCount,
         recoveredCount,
